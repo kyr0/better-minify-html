@@ -1,6 +1,5 @@
 [workspace]
 members = [
-  "bench/runners/minify-html",
   "minhtml",
   "minify-html-common",
   "minify-html-nodejs",

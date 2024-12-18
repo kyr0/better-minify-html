@@ -1,0 +1,17 @@
+{
+  "name": "better-minify-html-node-darwin-arm64",
+  "version": "0.16.0",
+  "description": "better-minify-html-node native module build for darwin-arm64",
+  "main": "index.node",
+  "files": [
+    "README.md",
+    "index.node"
+  ],
+  "repository": "https://github.com/kyr0/better-minify-html.git",
+  "os": [
+    "darwin"
+  ],
+  "cpu": [
+    "arm64"
+  ]
+}
