@@ -1,5 +1,9 @@
 # better-minify-html changelog
 
+## 0.17.0
+
+- Experimental fork release.
+
 ## 0.16.0
 
 - [Rust] Deny unsafe code in better-minify-html crate.
