@@ -11,7 +11,7 @@
     "index.js",
     "README.md"
   ],
-  "version": "0.17.0",
+  "version": "0.18.0",
   "types": "index.d.ts",
   "scripts": {
     "build": "cargo-cp-artifact --artifact cdylib minify-html-nodejs index.node -- cargo build --message-format=json-render-diagnostics",
