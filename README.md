@@ -1,10 +1,12 @@
 <h1>
-minify-html
+better-minify-html
 <img width="24" src="https://wilsonl.in/minify-html/icon/cli.png">
 <img width="24" src="https://wilsonl.in/minify-html/icon/nodejs.png">
 <img width="24" src="https://wilsonl.in/minify-html/icon/rust.png">
 <img width="24" src="https://wilsonl.in/minify-html/icon/wasm.png">
 </h1>
+
+> A maintained __fork__ of minify-html, crafted for stable Node.js native and WASM builds. My bandwidth is *limited* and I'm not going to fix stuff that isn't helpful for my purposes. As I only use Node.js and maybe the WASM build, I will only maintain these codepaths. Hence, I removed many features from this codebase. See the new CONTRIBUTORS.md if you are missing any features and want to help out. Contributors and co-maintainers are welcome! If you have the capacity to take care of e.g. Java, Ruby, Python or a new bench implementation, just craft a high quality PR (No AI generated crap please, thanks! ;).
 
 A Rust HTML minifier meticulously optimised for speed and effectiveness, with bindings for other languages.
 
