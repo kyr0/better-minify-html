@@ -122,14 +122,6 @@ for (const f of ["README.md"]) {
   );
 }
 
-for (const f of ["README.md", "bench/README.md"]) {
-  replaceInFile(
-    f,
-    /(kyr0\/better-minify-html\/bench\/)\d+\.\d+\.\d+/g,
-    `$1${NEW_VERSION}`
-  );
-}
-
 for (const f of ["minify-html-nodejs/package.json"]) {
   replaceInFile(
     f,
