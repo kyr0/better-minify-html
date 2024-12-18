@@ -1,9 +1,7 @@
 #!/usr/bin/env node
 
-"use strict";
-
-const { readFileSync, writeFileSync } = require("fs");
-const { spawnSync } = require("child_process");
+const { readFileSync, writeFileSync } = require("node:fs");
+const { spawnSync } = require("node:child_process");
 
 // Use minify-html as source of truth for current version value.
 const currentVersion = /^version = "(\d+)\.(\d+)\.(\d+)"\s*$/m
@@ -42,7 +40,7 @@ const cmd = (...cfg) => {
     throwOnSignal = true,
     captureStdio = false,
     throwOnStdErr = false,
-  } = typeof args[args.length - 1] == "object" ? args.pop() : {};
+  } = typeof args[args.length - 1] === "object" ? args.pop() : {};
 
   const throwErr = (msg) => {
     throw new Error(`${msg}\n  ${command} ${args.join(" ")}`);
@@ -97,12 +95,7 @@ replaceInFile("CHANGELOG.md", /^## Pending$/m, `## ${NEW_VERSION}`);
 
 for (const f of [
   "minhtml/Cargo.toml",
-  "minify-html-java/Cargo.toml",
   "minify-html-nodejs/Cargo.toml",
-  "minify-html-onepass-python/Cargo.toml",
-  "minify-html-onepass/Cargo.toml",
-  "minify-html-python/Cargo.toml",
-  "minify-html-ruby/ext/minify_html/Cargo.toml",
   "minify-html-wasm/Cargo.toml",
   "minify-html/Cargo.toml",
 ]) {
@@ -121,35 +114,19 @@ for (const f of ["minhtml/Cargo.toml"]) {
   );
 }
 
-for (const f of ["README.md", "minify-html-ruby/ext/minify_html/Cargo.toml"]) {
-  replaceInFile(f, /^(minify-html = )"\d+\.\d+\.\d+"/m, `$1"${NEW_VERSION}"`);
-}
-
 for (const f of ["README.md"]) {
   replaceInFile(
     f,
-    /(wilsonl\.in\/minify-html\/(?:bin|deno)\/)\d+\.\d+\.\d+/g,
+    /(kyr0\/better-minify-html\/(?:bin|deno)\/)\d+\.\d+\.\d+/g,
     `$1${NEW_VERSION}`
   );
 }
 
-for (const f of [
-  "README.md",
-  "bench/README.md",
-  "minify-html-onepass/README.md",
-]) {
+for (const f of ["README.md", "bench/README.md"]) {
   replaceInFile(
     f,
-    /(wilsonl\.in\/minify-html\/bench\/)\d+\.\d+\.\d+/g,
+    /(kyr0\/better-minify-html\/bench\/)\d+\.\d+\.\d+/g,
     `$1${NEW_VERSION}`
-  );
-}
-
-for (const f of ["minify-html-java/pom.xml", "README.md"]) {
-  replaceInFile(
-    f,
-    /(<artifactId>minify-html<\/artifactId>\s*<version>)\d+\.\d+\.\d+(<\/version>)/,
-    `$1${NEW_VERSION}$2`
   );
 }
 
@@ -161,18 +138,9 @@ for (const f of ["minify-html-nodejs/package.json"]) {
   );
 }
 
-for (const f of ["minify-html-ruby/minify_html.gemspec"]) {
-  replaceInFile(
-    f,
-    /^(\s*spec\.version\s*=\s*)"\d+\.\d+\.\d+"\s*$/m,
-    `$1"${NEW_VERSION}"`
-  );
-}
-
 cmd("git", "add", "-A");
 cmd("git", "commit", "-m", NEW_VERSION);
 cmd("git", "tag", "-a", `v${NEW_VERSION}`, "-m", "");
 cmd("cargo", "publish", { workingDir: `${__dirname}/minify-html` });
-cmd("cargo", "publish", { workingDir: `${__dirname}/minify-html-onepass` });
 cmd("cargo", "publish", { workingDir: `${__dirname}/minhtml` }); // This must come after the above as it depends on the just-published version of those.
 cmd("git", "push", "--follow-tags");

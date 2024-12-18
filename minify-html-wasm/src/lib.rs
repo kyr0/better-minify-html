@@ -1,5 +1,3 @@
-mod utils;
-
 use js_sys::Reflect;
 use wasm_bindgen::prelude::*;
 

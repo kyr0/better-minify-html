@@ -1,8 +1,8 @@
 [package]
 name = "index"
 publish = false
-version = "0.15.0"
-authors = ["Wilson Lin <code@wilsonl.in>"]
+version = "0.16.0"
+authors = ["Wilson Lin <code@wilsonl.in>", "Aron Homberg <info@aron-homberg.de>"]
 edition = "2021"
 
 [lib]
@@ -12,7 +12,7 @@ crate-type = ["cdylib", "rlib"]
 default = ["console_error_panic_hook"]
 
 [dependencies]
-js-sys = "0.3.58"
+js-sys = "0.3.76"
 minify-html = { path = "../minify-html" }
 wasm-bindgen = "0.2.63"
 

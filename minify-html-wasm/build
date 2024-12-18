@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
 
-set -Eeuxo pipefail
-
-pushd "$(dirname "$0")" >/dev/null
+#pushd "$(dirname "$0")" >/dev/null
 
 target="${TARGET:-bundler}"
 
 rm -rf pkg
+echo "Building for $target..."
 wasm-pack build --target "$target"
+
 pushd pkg
 # `bundler` is for WASM/npm, `web` is for Deno.
 if [[ "$target" = "bundler" ]]; then
@@ -19,4 +19,4 @@ elif [[ "$target" = "web" ]]; then
 fi
 popd
 
-popd >/dev/null
+#popd >/dev/null

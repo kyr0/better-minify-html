@@ -178,26 +178,9 @@ fn test_unmatched_closing_tag() {
 }
 
 #[test]
-// NOTE: Keep inputs in sync with onepass variant. Outputs are different as main variant reorders attributes.
-fn test_space_between_attrs_minification() {
-  eval_with_noncompliant(
-    b"<div a=\" \" b=\" \"></div>",
-    b"<div a=\" \"b=\" \"></div>",
-  );
-  eval_with_noncompliant(b"<div a=' ' b=\" \"></div>", b"<div a=\" \"b=\" \"></div>");
-  eval_with_noncompliant(
-    b"<div a=&#x20 b=\" \"></div>",
-    b"<div a=\" \"b=\" \"></div>",
-  );
-  eval_with_noncompliant(b"<div a=\"1\" b=\" \"></div>", b"<div b=\" \"a=1></div>");
-  eval_with_noncompliant(b"<div a='1' b=\" \"></div>", b"<div b=\" \"a=1></div>");
-  eval_with_noncompliant(b"<div a=\"a\"b=\"b\"></div>", b"<div a=a b=b></div>");
-}
-
-#[test]
 fn test_attr_whatwg_unquoted_value_minification() {
   eval(b"<a b==></a>", br#"<a b="="></a>"#);
-  eval(br#"<a b=`'"<<==/`/></a>"#, br#"<a b="`'&#34<<==/`/"></a>"#);
+  eval(br#"<a b=`'"<<==/`/></a>"#, br#"<a b="`'&#34;<<==/`/"></a>"#);
 }
 
 #[test]

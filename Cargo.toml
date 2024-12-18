@@ -1,20 +1,13 @@
 [workspace]
 members = [
-  "bench/runners/minify-html-onepass",
   "bench/runners/minify-html",
-  "debug/diff/c14n",
-  "debug/diff/charlines",
   "minhtml",
   "minify-html-common",
-  "minify-html-java",
   "minify-html-nodejs",
-  "minify-html-onepass-python",
-  "minify-html-onepass",
-  "minify-html-python",
-  "minify-html-ruby/ext/minify_html",
   "minify-html-wasm",
   "minify-html",
 ]
+resolver = "2"
 
 [profile.release]
 codegen-units = 1

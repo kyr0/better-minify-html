@@ -1,9 +1,5 @@
 #!/usr/bin/env bash
 
-set -Eeuxo pipefail
-
-pushd "$(dirname "$0")" >/dev/null
-
 npx prettier@2.3.2 -w \
   'bench/*.{js,json}' \
   'bench/runners/*.{js,json}' \

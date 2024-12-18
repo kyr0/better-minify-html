@@ -8,6 +8,5 @@ GitHub currently doesn't provide ARM64 macOS and Linux runners, so we run self-h
 
 - Rust
 - Node.js
-- Python/pyenv
 
 See each workflow YAML file for the specific programs that need to be installed beforehand.

@@ -1,22 +1,29 @@
 {
-  "name": "@minify-html/wasm",
+  "name": "better-minify-html-wasm",
   "description": "Extremely fast and smart HTML + JS + CSS minifier",
   "type": "module",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wilsonzlin/minify-html.git"
+    "url": "git+https://github.com/kyr0/better-minify-html.git"
   },
-  "author": {
+  "authors": [{
     "email": "npm@wilsonl.in",
     "name": "Wilson Lin",
     "url": "https://wilsonl.in/"
-  },
+  }, {
+    "name": "Aron Homberg",
+    "url": "https://aron-homberg.de/",
+    "email": "info@aron-homberg.de"
+  }],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/wilsonzlin/minify-html/issues"
+    "url": "https://github.com/kyr0/better-minify-html/issues"
   },
-  "homepage": "https://github.com/wilsonzlin/minify-html#readme",
+  "engines": {
+    "node": ">= 8.6.0"
+  },
+  "homepage": "https://github.com/kyr0/better-minify-html#readme",
   "keywords": [
     "compress",
     "compressor",

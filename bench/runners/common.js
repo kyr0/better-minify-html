@@ -1,8 +1,8 @@
 const esbuild = require("esbuild");
-const fs = require("fs");
-const path = require("path");
+const fs = require("node:fs");
+const path = require("node:path");
 
-const iterations = parseInt(process.env.MHB_ITERATIONS, 10);
+const iterations = Number.parseInt(process.env.MHB_ITERATIONS, 10);
 const inputDir = process.env.MHB_INPUT_DIR;
 const htmlOnly = process.env.MHB_HTML_ONLY === "1";
 const outputDir = process.env.MHB_OUTPUT_DIR;

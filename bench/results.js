@@ -1,5 +1,5 @@
-const fs = require("fs");
-const path = require("path");
+const fs = require("node:fs");
+const path = require("node:path");
 
 const RESULTS_DIR = path.join(__dirname, "results");
 const INPUTS_DIR = path.join(__dirname, "inputs");
@@ -34,9 +34,13 @@ module.exports = {
         const originalSize = inputSizes[input];
         const ops = 1 / (seconds / iterations);
         const reduction = 1 - size / originalSize;
+        // biome-ignore lint/suspicious/noAssignInExpressions: <explanation>
         (minifierAvgOps[minifier] ??= []).push(ops);
+        // biome-ignore lint/suspicious/noAssignInExpressions: <explanation>
         (minifierAvgReduction[minifier] ??= []).push(reduction);
+        // biome-ignore lint/suspicious/noAssignInExpressions: <explanation>
         (perInputOps[minifier] ??= {})[input] = ops;
+        // biome-ignore lint/suspicious/noAssignInExpressions: <explanation>
         (perInputReduction[minifier] ??= {})[input] = reduction;
         maxInputOps[input] = Math.max(maxInputOps[input] ?? 0, ops);
       }

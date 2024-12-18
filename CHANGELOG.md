@@ -1,6 +1,6 @@
-# minify-html changelog
+# better-minify-html changelog
 
-## Pending
+## 0.16.0
 
 - [Rust] Deny unsafe code in minify-html crate.
 - BREAKING: Cfg options have changed such that spec compliance is the default, to avoid confusion with users:
@@ -11,9 +11,16 @@
 - BREAKING: Some entity minifications are now classified as "possibly noncompliant" and can be enabled via the `allow_optimal_entities` option but won't be performed by default.
 - [Internal] Migrate to [aHash](https://github.com/tkaitchuck/aHash/blob/master/compare/readme.md) for faster more consistent performance and once_cell for modern ergonomics.
 - [Node.js] Fix ARM64 package metadata.
-- [Python] Add Python 3.13 support.
+- [Python] Support removed, sorry, no capacity to maintain that.
+- [Java] Support removed, sorry, no capacity to maintain that.
+- [onepass*] Support removed, sorry, no capacity to maintain that.
+- [Ruby] Support removed, sorry, no capacity to maintain that.
+- Bench only runs locally.
+- Added a bunch of documentation, so that one knows what tools to install and what commands to run for a local build.
+- Fixed tests; removed flaky tests.
+- Removed Deno support. Sorry, no capacity to maintain that.
 
-## 0.15.0
+## 0.16.0
 
 - Add `keep_input_type_text_attr` option to keep `type=text` on `<input>` elements.
 - [Java] The `Configuration` class constructor has been made private to enforce the use of the builder. The constructor has a lot of params which can easily cause bugs due to ordering and confusion.

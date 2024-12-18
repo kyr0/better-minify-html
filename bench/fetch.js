@@ -1,6 +1,6 @@
-const { promises: fs } = require("fs");
-const childProcess = require("child_process");
-const path = require("path");
+const { promises: fs } = require("node:fs");
+const childProcess = require("node:child_process");
+const path = require("node:path");
 
 const tests = {
   Amazon: "https://www.amazon.com/",
@@ -25,7 +25,7 @@ const fetchTest = (name, url) =>
       "curl",
       [
         "-H",
-        `User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; rv:71.0) Gecko/20100101 Firefox/71.0`,
+        "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; rv:71.0) Gecko/20100101 Firefox/71.0",
         "-H",
         "Accept: */*",
         "-fLSs",
