@@ -1,11 +1,7 @@
 <h1>
 minify-html
 <img width="24" src="https://wilsonl.in/minify-html/icon/cli.png">
-<img width="24" src="https://wilsonl.in/minify-html/icon/deno.png">
-<img width="24" src="https://wilsonl.in/minify-html/icon/java.png">
 <img width="24" src="https://wilsonl.in/minify-html/icon/nodejs.png">
-<img width="24" src="https://wilsonl.in/minify-html/icon/python.png">
-<img width="24" src="https://wilsonl.in/minify-html/icon/ruby.png">
 <img width="24" src="https://wilsonl.in/minify-html/icon/rust.png">
 <img width="24" src="https://wilsonl.in/minify-html/icon/wasm.png">
 </h1>
