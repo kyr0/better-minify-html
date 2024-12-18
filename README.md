@@ -157,7 +157,7 @@ minify-html has advanced context-aware whitespace minification that does things 
 
 #### Methods
 
-There are three whitespace minification methods. When processing text content, minify-html chooses which ones to use depending on the containing element.
+There are three whitespace minification methods. When processing text content, better-minify-html chooses which ones to use depending on the containing element.
 
 <details>
 <summary><strong>Collapse whitespace</strong></summary>
@@ -385,4 +385,4 @@ minify-html can process any HTML, handling all possible syntax (including invali
 
 Pull requests and any contributions welcome!
 
-If minify-html did something unexpected, misunderstood some syntax, or incorrectly kept/removed some code, [raise an issue](https://github.com/wilsonzlin/minify-html/issues) with some relevant code that can be used to reproduce and investigate the issue.
+If better-minify-html did something unexpected, misunderstood some syntax, or incorrectly kept/removed some code, [raise an issue](https://github.com/kyr0/better-minify-html/issues) with some relevant code that can be used to reproduce and investigate the issue.

@@ -3,7 +3,7 @@
 const { readFileSync, writeFileSync } = require("node:fs");
 const { spawnSync } = require("node:child_process");
 
-// Use minify-html as source of truth for current version value.
+// Use better-minify-html as source of truth for current version value.
 const currentVersion = /^version = "(\d+)\.(\d+)\.(\d+)"\s*$/m
   .exec(readFileSync(`${__dirname}/minify-html/Cargo.toml`, "utf8"))
   .slice(1)

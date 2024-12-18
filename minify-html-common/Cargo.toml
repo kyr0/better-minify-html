@@ -1,9 +1,9 @@
 [package]
 name = "minify-html-common"
-description = "Common code and data for minify-html*"
+description = "Common code and data for better-minify-html*"
 license = "MIT"
-homepage = "https://github.com/wilsonzlin/minify-html"
-repository = "https://github.com/wilsonzlin/minify-html.git"
+homepage = "https://github.com/kyr0/better-minify-html"
+repository = "https://github.com/kyr0/better-minify-html.git"
 version = "0.0.2"
 authors = ["Wilson Lin <code@wilsonl.in>", "Aron Homberg <info@aron-homberg.de>"]
 edition = "2018"

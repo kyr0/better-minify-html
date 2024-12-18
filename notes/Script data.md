@@ -8,7 +8,7 @@ minify-html does **not** do this special handling, as it adds complexity and slo
 
 See https://www.w3.org/TR/html52/syntax.html#script-data-state for more details.
 
-Commit [20c59769](https://github.com/wilsonzlin/minify-html/commit/20c59769fea6bfb8a9d5ecea47d979dc9b1dcda5) removed support.
+Commit [20c59769](https://github.com/kyr0/better-minify-html/commit/20c59769fea6bfb8a9d5ecea47d979dc9b1dcda5) removed support.
 
 ## States and transitions
 

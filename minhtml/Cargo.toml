@@ -5,11 +5,11 @@ version = "0.16.0"
 authors = ["Wilson Lin <code@wilsonl.in>", "Aron Homberg <info@aron-homberg.de>"]
 edition = "2021"
 license = "MIT"
-homepage = "https://github.com/wilsonzlin/minify-html"
+homepage = "https://github.com/kyr0/better-minify-html"
 readme = "README.md"
 keywords = ["html", "compress", "minifier", "js", "css"]
 categories = ["compression", "command-line-utilities", "development-tools::build-utils", "web-programming"]
-repository = "https://github.com/wilsonzlin/minify-html.git"
+repository = "https://github.com/kyr0/better-minify-html.git"
 
 [dependencies]
 minify-html = { version = "0.16.0", path = "../minify-html" }

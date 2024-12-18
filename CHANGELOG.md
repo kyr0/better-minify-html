@@ -2,7 +2,7 @@
 
 ## 0.16.0
 
-- [Rust] Deny unsafe code in minify-html crate.
+- [Rust] Deny unsafe code in better-minify-html crate.
 - BREAKING: Cfg options have changed such that spec compliance is the default, to avoid confusion with users:
   - `do_not_minify_doctype` => `minify_doctype`
   - `ensure_spec_compliant_unquoted_attribute_values` => `allow_noncompliant_unquoted_attribute_values`
