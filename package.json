@@ -4,7 +4,7 @@
   "description": "A better minifier for HTML, CSS, and JavaScript.",
   "scripts": {
     "build": "cargo build",
-    "next-version": "node version",
+    "next-version": "node next-version minor",
     "format": "npx prettier@2.3.2 -w 'bench/**/*.{js,json}' 'minify-html-nodejs/**/*.{js,json,ts}' 'next-version'",
     "format:rust": "cargo +nightly fmt",
     "test": "RUST_BACKTRACE=1 cargo test"
