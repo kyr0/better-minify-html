@@ -1,5 +1,5 @@
 {
-  "name": "@minify-html/node",
+  "name": "better-minify-html-node",
   "description": "Extremely fast and smart HTML + JS + CSS minifier",
   "bin": {
     "minify-html": "./cli.js"
@@ -11,41 +11,46 @@
     "index.js",
     "README.md"
   ],
-  "version": "0.15.0",
+  "version": "0.16.0",
   "types": "index.d.ts",
   "scripts": {
     "build": "cargo-cp-artifact --artifact cdylib minify-html-nodejs index.node -- cargo build --message-format=json-render-diagnostics",
+    "postbuild": "TARGET=aarch64-apple-darwin node plat-pkg/package.json.gen.js",
     "build-debug": "npm run build --",
     "build-release": "npm run build -- --release",
     "clean": "shx rm -rf target index.node"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wilsonzlin/minify-html.git"
+    "url": "git+https://github.com/kyr0/better-minify-html.git"
   },
-  "author": {
+  "authors": [{
     "email": "npm@wilsonl.in",
     "name": "Wilson Lin",
     "url": "https://wilsonl.in/"
-  },
+  }, {
+    "name": "Aron Homberg",
+    "url": "https://aron-homberg.de/",
+    "email": "info@aron-homberg.de"
+  }],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/wilsonzlin/minify-html/issues"
+    "url": "https://github.com/kyr0/better-minify-html/issues"
   },
   "engines": {
     "node": ">= 8.6.0"
   },
-  "homepage": "https://github.com/wilsonzlin/minify-html#readme",
+  "homepage": "https://github.com/kyr0/better-minify-html#readme",
   "optionalDependencies": {
-    "@minify-html/node-darwin-arm64": "0.15.0",
-    "@minify-html/node-darwin-x64": "0.15.0",
-    "@minify-html/node-linux-arm64": "0.15.0",
-    "@minify-html/node-linux-x64": "0.15.0",
-    "@minify-html/node-win32-x64": "0.15.0"
+    "better-minify-html-node-darwin-arm64": "0.16.0",
+    "better-minify-html-node-darwin-x64": "0.16.0",
+    "better-minify-html-node-linux-arm64": "0.16.0",
+    "better-minify-html-node-linux-x64": "0.16.0",
+    "better-minify-html-node-win32-x64": "0.16.0"
   },
   "devDependencies": {
-    "@types/node": "^14.6.0",
-    "cargo-cp-artifact": "^0.1",
+    "@types/node": "^22.10.2",
+    "cargo-cp-artifact": "^0.1.9",
     "shx": "^0.3.4"
   },
   "keywords": [

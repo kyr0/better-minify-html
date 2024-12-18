@@ -4,5 +4,5 @@ try {
   // Prioritise any local built binary.
   module.exports = require("./index.node");
 } catch {
-  module.exports = require(`@minify-html/node-${process.platform}-${process.arch}`);
+  module.exports = require(`better-minify-html-node-${process.platform}-${process.arch}`);
 }

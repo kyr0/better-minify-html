@@ -1,9 +1,9 @@
 [package]
 name = "minify-html-nodejs"
 publish = false
-version = "0.15.0"
-description = "Node.js bindings for minify-html"
-authors = ["Wilson Lin <npm@wilsonl.in>"]
+version = "0.16.0"
+description = "Node.js bindings for better-minify-html"
+authors = ["Wilson Lin <npm@wilsonl.in>", "Aron Homberg <info@aron-homberg.de>"]
 edition = "2021"
 
 [lib]
