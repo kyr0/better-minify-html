@@ -31,3 +31,5 @@ index.node
 
 # WASM
 /minify-html-wasm/pkg/
+
+.DS_Store
