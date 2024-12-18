@@ -19,6 +19,7 @@
 - Added a bunch of documentation, so that one knows what tools to install and what commands to run for a local build.
 - Fixed tests; removed flaky tests.
 - Removed Deno support. Sorry, no capacity to maintain that.
+- Removed benchmarking for now. Sorry, no capacity. I might re-implement this using a better approach.
 
 ## 0.16.0
 
